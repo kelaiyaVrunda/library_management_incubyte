@@ -8,6 +8,7 @@ public class Main {
         while (true) {
             System.out.println("\n Library Management System");
             System.out.println("1. Add Book");
+
             int choice = scanner.nextInt();
             scanner.nextLine();
 
@@ -16,7 +17,9 @@ public class Main {
                     case 1:
                         System.out.println("Enter ISBN:");
                         String isbn = scanner.nextLine();
-                        library.addBook(new Book(isbn));
+                        System.out.println("Enter Title:");
+                        String title = scanner.nextLine();
+                        library.addBook(new Book(isbn, title));
                         scanner.close();
                         return;
                 }
