@@ -10,6 +10,9 @@ public class Main {
             System.out.println("1. Add Book");
             System.out.println("2. Borrow Book");
             System.out.println("3. Return Book:");
+            System.out.println("4. Available Books:");
+            System.out.println("5. Exit");
+            System.out.println("Enter your choice:");
 
             int choice = scanner.nextInt();
             scanner.nextLine();
@@ -43,10 +46,14 @@ public class Main {
                     case 4:
                         System.out.println("Available Books:");
                         library.viewAvailableBooks();
-
+                        break;
+                    case 5:
+                        System.out.println("Exiting System....");
                         scanner.close();
                         return;
 
+                    default:
+                        System.out.println("Invalid choice. Please try again.");
                 }
             } catch (Exception e) {
 
