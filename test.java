@@ -29,7 +29,9 @@ public class test {
     @Test
     public void testAvailableBooksAfterAdding() {
         Library library = new Library();
-        
+        Book book1 = new Book("1234", "Effective Java", "Joshua Bloch", 2018);
+        Book book2 = new Book("5678", "Clean Code", "Robert C. Martin", 2008);
+
         library.addBook(book1);
         library.addBook(book2);
     }

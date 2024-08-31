@@ -33,4 +33,14 @@ public class Library {
         }
     }
 
+    public void viewAvailableBooks() {
+        for (Book book : books.values()) {
+            if (book.isAvailable()) {
+                System.out.println(book);
+            } else {
+                System.out.println("Book not found.");
+            }
+        }
+    }
+
 }

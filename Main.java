@@ -39,6 +39,11 @@ public class Main {
                         isbn = scanner.nextLine();
                         library.returnBook(isbn);
                         System.out.println("Book returned successfully.");
+                        break;
+                    case 4:
+                        System.out.println("Available Books:");
+                        library.viewAvailableBooks();
+
                         scanner.close();
                         return;
 
