@@ -11,10 +11,15 @@ public class test {
 
     @Test
     public void testBorrowBook() {
-    Library library = new Library();
-    Book book = new Book("1234", "Effective Java", "Joshua Bloch", 2018);
+        Library library = new Library();
+        Book book = new Book("1234", "Effective Java", "Joshua Bloch", 2018);
         library.addBook(book);
         library.borrowBook("1234");
+    }
+    @Test
+    public void testReturnBook(){
+        Library library=new Library();
+        library.returnBook("1234");
     }
 
 }
