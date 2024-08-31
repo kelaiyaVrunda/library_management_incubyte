@@ -59,10 +59,10 @@ public class test {
         Library library = new Library();
         Book book = new Book("1234", "Effective Java", "Joshua Bloch", 2018);
         library.addBook(book);
-        
+
         // Borrow the book once
         library.borrowBook("1234");
-        
+
         // Attempt to borrow the same book again (should throw an exception)
         library.borrowBook("1234");
     }
@@ -75,6 +75,14 @@ public class test {
         library.borrowBook("1234");
         library.returnBook("1234");
         assertEquals(1, library.getAvailableBooksCount());
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testReturnNonExistentBook() {
+        Library library = new Library();
+        
+        // Attempt to return a book that doesn't exist in the library
+        library.returnBook("9999");
     }
 
     @Test
