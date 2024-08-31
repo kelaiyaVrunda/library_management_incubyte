@@ -17,6 +17,8 @@ public class Main {
                         System.out.println("Enter ISBN:");
                         String isbn = scanner.nextLine();
                         library.addBook(new Book(isbn));
+                        scanner.close();
+                        return;
                 }
             } catch (Exception e) {
 
