@@ -43,4 +43,17 @@ public class Library {
         }
     }
 
+    public int getBooksCount() {
+        return books.size();
+    }
+
+    public int getAvailableBooksCount() {
+        int count = 0;
+        for (Book book : books.values()) {
+            if (book.isAvailable()) {
+                count++;
+            }
+        }
+        return count;
+    }
 }
