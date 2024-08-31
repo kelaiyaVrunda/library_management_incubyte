@@ -24,6 +24,7 @@ public class Main {
                         System.out.println("Enter Publication Year:");
                         int year = scanner.nextInt();
                         library.addBook(new Book(isbn, title, auhtor, year));
+                        System.out.println("Book added successfully.");
                         scanner.close();
                         return;
                 }
