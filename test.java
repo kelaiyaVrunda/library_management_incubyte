@@ -16,7 +16,8 @@ public class test {
         Book book = new Book("1234", "Effective Java", "Joshua Bloch", 2018);
         library.addBook(book);
         library.borrowBook("1234");
-        assertEquals(0, library.getAvailableBooksCount()); 
+        assertFalse(book.isAvailable());
+        assertEquals(0, library.getAvailableBooksCount());
     }
 
     @Test
@@ -26,6 +27,7 @@ public class test {
         library.addBook(book);
         library.borrowBook("1234");
         library.returnBook("1234");
+        assertEquals(1, library.getAvailableBooksCount());  
     }
 
     @Test
