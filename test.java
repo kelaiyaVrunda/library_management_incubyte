@@ -2,6 +2,9 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class test {
+
+    // book added
+    
     @Test
     public void testAddBook() {
         Library library = new Library();
@@ -10,6 +13,7 @@ public class test {
         assertEquals(1, library.getBooksCount());
     }
 
+    // adding multiple book
     @Test
     public void testAddMultipleBooks() {
         Library library = new Library();
@@ -24,6 +28,7 @@ public class test {
         // Check if the book count is now 3
         assertEquals(3, library.getBooksCount());
     }
+    // adding duplicate book
 
     @Test(expected = IllegalArgumentException.class)
     public void testAddDuplicateBook() {
@@ -36,6 +41,8 @@ public class test {
         library.addBook(book2);
     }
 
+    // Book borrowed
+
     @Test
     public void testBorrowBook() {
         Library library = new Library();
@@ -45,6 +52,7 @@ public class test {
         assertFalse(book.isAvailable());
         assertEquals(0, library.getAvailableBooksCount());
     }
+    // borrowing non existing book
 
     @Test(expected = IllegalArgumentException.class)
     public void testBorrowNonExistentBook() {
@@ -53,6 +61,8 @@ public class test {
         // Attempt to borrow a book that doesn't exist in the library
         library.borrowBook("9999");
     }
+
+    // borrow already borrowed book
 
     @Test(expected = IllegalStateException.class)
     public void testBorrowAlreadyBorrowedBook() {
@@ -67,6 +77,8 @@ public class test {
         library.borrowBook("1234");
     }
 
+    // Return Book
+
     @Test
     public void testReturnBook() {
         Library library = new Library();
@@ -76,6 +88,7 @@ public class test {
         library.returnBook("1234");
         assertEquals(1, library.getAvailableBooksCount());
     }
+    // return non existing book
 
     @Test(expected = IllegalArgumentException.class)
     public void testReturnNonExistentBook() {
@@ -84,6 +97,8 @@ public class test {
         // Attempt to return a book that doesn't exist in the library
         library.returnBook("9999");
     }
+
+    // Available Books
 
     @Test
     public void testAvailableBooksAfterAdding() {
@@ -95,6 +110,8 @@ public class test {
         library.addBook(book2);
         assertEquals(2, library.getAvailableBooksCount());
     }
+
+    // available book after borrow
 
     @Test
     public void testAvailableBooksAfterBorrowing() {
@@ -112,6 +129,8 @@ public class test {
         assertEquals(1, library.getAvailableBooksCount());
     }
 
+    // available book after return
+
     @Test
     public void testAvailableBooksAfterReturning() {
         Library library = new Library();
@@ -128,7 +147,7 @@ public class test {
         // Both books should be available again
         assertEquals(2, library.getAvailableBooksCount());
     }
-
+    // No book available
     @Test
     public void testNoAvailableBooks() {
         Library library = new Library();

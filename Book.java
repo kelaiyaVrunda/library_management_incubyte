@@ -1,9 +1,11 @@
 public class Book {
-    private String isbn;
-    private String title;
-    private String author;
-    private int publicationYear;
-    private boolean isAvailable;
+    private String isbn; // isbn which is unique
+    private String title; // book title
+    private String author; // author name
+    private int publicationYear; // publish year of book
+    private boolean isAvailable; // whether book is available or not
+
+    // constructor for following object
 
     public Book(String isbn, String title, String author, int publicationYear) {
         this.isbn = isbn;
@@ -14,21 +16,31 @@ public class Book {
 
     }
 
+    // fetch isbn from data
+
     public String getIsbn() {
         return isbn;
     }
+
+    // fetch title from data
 
     public String getTitle() {
         return title;
     }
 
+    // fetch author from data
+
     public String getAuthor() {
         return author;
     }
 
+    // fetch year when book was published from data
+
     public int getpublicationYear() {
         return publicationYear;
     }
+
+    // fetch book if available
 
     public boolean isAvailable() {
         return isAvailable;
@@ -46,6 +58,7 @@ public class Book {
         isAvailable = true;
     }
 
+    // return the data added
     public String toString() {
         return "ISBN:" + isbn + ", Title:" + title + ",Auhtor:" + author + ",Year:" + publicationYear + ", Available:"
                 + isAvailable;

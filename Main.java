@@ -1,9 +1,13 @@
+
+//to take user input import scanner class
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Library library = new Library();
         Scanner scanner = new Scanner(System.in);
+
+        // Enter the choice to select the operations
 
         while (true) {
             System.out.println("\n Library Management System");
@@ -19,6 +23,8 @@ public class Main {
 
             try {
                 switch (choice) {
+                    // code to add book
+
                     case 1:
                         System.out.println("Enter ISBN:");
                         String isbn = scanner.nextLine();
@@ -31,22 +37,34 @@ public class Main {
                         library.addBook(new Book(isbn, title, auhtor, year));
                         System.out.println("Book added successfully.");
                         break;
+
+                    // code to borrow the book
+
                     case 2:
                         System.out.println("Enter ISBN of the book to borrow:");
                         isbn = scanner.nextLine();
                         library.borrowBook(isbn);
                         System.out.println("Book borrowed successfully.");
                         break;
+
+                    // code to return book
+
                     case 3:
                         System.out.println("Enter ISBN of the book to return:");
                         isbn = scanner.nextLine();
                         library.returnBook(isbn);
                         System.out.println("Book returned successfully.");
                         break;
+
+                    // code to see available books
+
                     case 4:
                         System.out.println("Available Books:");
                         library.viewAvailableBooks();
                         break;
+
+                    // code to exit system
+
                     case 5:
                         System.out.println("Exiting System....");
                         scanner.close();
