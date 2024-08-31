@@ -1,7 +1,7 @@
 import java.util.HashMap;
 import java.util.Map;
 
-public class Library<books> {
+public class Library {
     private Map<String, Book> books;
 
     public Library() {
@@ -9,5 +9,11 @@ public class Library<books> {
     }
 
     public void addBook(Book book) {
+        if (!books.containsKey(book.getIsbn())) {
+            books.put(book.getIsbn(), book);
+        } else {
+            throw new IllegalArgumentException("Book with this ISBN already exists!");
+        }
+
     }
 }
