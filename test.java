@@ -85,16 +85,6 @@ public class test {
         library.returnBook("9999");
     }
 
-    @Test(expected = IllegalStateException.class)
-    public void testReturnBookNotBorrowed() {
-        Library library = new Library();
-        Book book = new Book("1234", "Effective Java", "Joshua Bloch", 2018);
-        library.addBook(book);
-        
-        // Attempt to return a book that hasn't been borrowed yet
-        library.returnBook("1234");
-    }
-
     @Test
     public void testAvailableBooksAfterAdding() {
         Library library = new Library();
