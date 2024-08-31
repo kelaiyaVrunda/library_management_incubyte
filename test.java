@@ -9,6 +9,7 @@ public class test {
         library.addBook(book);
         assertEquals(1, library.getBooksCount());
     }
+
     @Test
     public void testAddMultipleBooks() {
         Library library = new Library();
@@ -19,9 +20,21 @@ public class test {
         library.addBook(book1);
         library.addBook(book2);
         library.addBook(book3);
-        
+
         // Check if the book count is now 3
         assertEquals(3, library.getBooksCount());
+    }
+
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testAddDuplicateBook() {
+        Library library = new Library();
+        Book book1 = new Book("1234", "Effective Java", "Joshua Bloch", 2018);
+        Book book2 = new Book("1234", "Effective Java", "Joshua Bloch", 2018);
+
+        library.addBook(book1);
+        // Attempting to add a duplicate book should throw an IllegalArgumentException
+        library.addBook(book2);
     }
 
     @Test
