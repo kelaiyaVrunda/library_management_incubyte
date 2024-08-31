@@ -27,7 +27,7 @@ public class test {
         library.addBook(book);
         library.borrowBook("1234");
         library.returnBook("1234");
-        assertEquals(1, library.getAvailableBooksCount());  
+        assertEquals(1, library.getAvailableBooksCount());
     }
 
     @Test
@@ -38,6 +38,6 @@ public class test {
 
         library.addBook(book1);
         library.addBook(book2);
+        assertEquals(2, library.getAvailableBooksCount());
     }
-
 }
