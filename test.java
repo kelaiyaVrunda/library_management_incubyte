@@ -5,7 +5,7 @@ public class test {
     @Test
     public void testAddBook() {
         Library library = new Library();
-        Book book = new Book("1234");
+        Book book = new Book("1234","Effective java");
         library.addBook(book);
 
     }
