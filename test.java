@@ -16,9 +16,13 @@ public class test {
         library.addBook(book);
         library.borrowBook("1234");
     }
+
     @Test
-    public void testReturnBook(){
-        Library library=new Library();
+    public void testReturnBook() {
+        Library library = new Library();
+        Book book = new Book("1234", "Effective Java", "Joshua Bloch", 2018);
+        library.addBook(book);
+        library.borrowBook("1234");
         library.returnBook("1234");
     }
 

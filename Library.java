@@ -25,4 +25,12 @@ public class Library {
         }
     }
 
+    public void returnBook(String isbn) {
+        if (books.containsKey(isbn)) {
+            books.get(isbn).returnBook();
+        } else {
+            throw new IllegalArgumentException("Book not found!");
+        }
+    }
+
 }

@@ -42,6 +42,10 @@ public class Book {
         }
     }
 
+    public void returnBook() {
+        isAvailable = true;
+    }
+
     public String toString() {
         return "ISBN:" + isbn + ", Title:" + title + ",Auhtor:" + author + ",Year:" + publicationYear + ", Available:"
                 + isAvailable;
