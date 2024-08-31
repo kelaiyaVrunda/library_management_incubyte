@@ -7,7 +7,7 @@ public class test {
         Library library = new Library();
         Book book = new Book("1234", "Effective java", "Joshua Bloch", 2018);
         library.addBook(book);
-        assertEquals(1,library.getBooksCount());
+        assertEquals(1, library.getBooksCount());
     }
 
     @Test
@@ -16,6 +16,7 @@ public class test {
         Book book = new Book("1234", "Effective Java", "Joshua Bloch", 2018);
         library.addBook(book);
         library.borrowBook("1234");
+        assertEquals(0, library.getAvailableBooksCount()); 
     }
 
     @Test
