@@ -19,7 +19,9 @@ public class Main {
                         String isbn = scanner.nextLine();
                         System.out.println("Enter Title:");
                         String title = scanner.nextLine();
-                        library.addBook(new Book(isbn, title));
+                        System.out.println("Enter Auhtor:");
+                        String auhtor = scanner.nextLine();
+                        library.addBook(new Book(isbn, title, auhtor));
                         scanner.close();
                         return;
                 }

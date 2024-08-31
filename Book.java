@@ -1,10 +1,12 @@
 public class Book {
     private String isbn;
     private String title;
+    private String author;
 
-    public Book(String isbn, String title) {
+    public Book(String isbn, String title, String author) {
         this.isbn = isbn;
         this.title = title;
+        this.author = author;
 
     }
 
@@ -16,7 +18,11 @@ public class Book {
         return title;
     }
 
+    public String getAuthor() {
+        return author;
+    }
+
     public String toString() {
-        return "ISBN:" + isbn + ", Title:" + title;
+        return "ISBN:" + isbn + ", Title:" + title + ",Auhtor:" + author;
     }
 }
