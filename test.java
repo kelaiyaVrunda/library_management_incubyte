@@ -25,7 +25,6 @@ public class test {
         assertEquals(3, library.getBooksCount());
     }
 
-
     @Test(expected = IllegalArgumentException.class)
     public void testAddDuplicateBook() {
         Library library = new Library();
@@ -45,6 +44,14 @@ public class test {
         library.borrowBook("1234");
         assertFalse(book.isAvailable());
         assertEquals(0, library.getAvailableBooksCount());
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testBorrowNonExistentBook() {
+        Library library = new Library();
+        
+        // Attempt to borrow a book that doesn't exist in the library
+        library.borrowBook("9999");
     }
 
     @Test
