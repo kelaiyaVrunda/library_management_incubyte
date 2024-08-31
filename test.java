@@ -49,9 +49,22 @@ public class test {
     @Test(expected = IllegalArgumentException.class)
     public void testBorrowNonExistentBook() {
         Library library = new Library();
-        
+
         // Attempt to borrow a book that doesn't exist in the library
         library.borrowBook("9999");
+    }
+
+    @Test(expected = IllegalStateException.class)
+    public void testBorrowAlreadyBorrowedBook() {
+        Library library = new Library();
+        Book book = new Book("1234", "Effective Java", "Joshua Bloch", 2018);
+        library.addBook(book);
+        
+        // Borrow the book once
+        library.borrowBook("1234");
+        
+        // Attempt to borrow the same book again (should throw an exception)
+        library.borrowBook("1234");
     }
 
     @Test
