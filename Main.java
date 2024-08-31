@@ -21,7 +21,9 @@ public class Main {
                         String title = scanner.nextLine();
                         System.out.println("Enter Auhtor:");
                         String auhtor = scanner.nextLine();
-                        library.addBook(new Book(isbn, title, auhtor));
+                        System.out.println("Enter Publication Year:");
+                        int year = scanner.nextInt();
+                        library.addBook(new Book(isbn, title, auhtor, year));
                         scanner.close();
                         return;
                 }
