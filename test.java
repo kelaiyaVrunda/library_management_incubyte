@@ -111,20 +111,38 @@ public class test {
         // Only one book should be available now
         assertEquals(1, library.getAvailableBooksCount());
     }
+
     @Test
     public void testAvailableBooksAfterReturning() {
         Library library = new Library();
         Book book1 = new Book("1234", "Effective Java", "Joshua Bloch", 2018);
         Book book2 = new Book("5678", "Clean Code", "Robert C. Martin", 2008);
-        
+
         library.addBook(book1);
         library.addBook(book2);
-        
+
         // Borrow and then return one book
         library.borrowBook("1234");
         library.returnBook("1234");
-        
+
         // Both books should be available again
         assertEquals(2, library.getAvailableBooksCount());
+    }
+
+    @Test
+    public void testNoAvailableBooks() {
+        Library library = new Library();
+        Book book1 = new Book("1234", "Effective Java", "Joshua Bloch", 2018);
+
+        
+        library.addBook(book1);
+
+        
+        // Borrow all books
+        library.borrowBook("1234");
+
+        
+        // No books should be available
+        assertEquals(0, library.getAvailableBooksCount());
     }
 }
