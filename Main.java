@@ -8,6 +8,7 @@ public class Main {
         while (true) {
             System.out.println("\n Library Management System");
             System.out.println("1. Add Book");
+            System.out.println("2. Borrow Book");
 
             int choice = scanner.nextInt();
             scanner.nextLine();
@@ -25,8 +26,15 @@ public class Main {
                         int year = scanner.nextInt();
                         library.addBook(new Book(isbn, title, auhtor, year));
                         System.out.println("Book added successfully.");
+                        break;
+                    case 2:
+                        System.out.println("Enter ISBN of the book to borrow:");
+                        isbn = scanner.nextLine();
+                        library.borrowBook(isbn);
+                        System.out.println("Book borrowed successfully.");
                         scanner.close();
                         return;
+
                 }
             } catch (Exception e) {
 

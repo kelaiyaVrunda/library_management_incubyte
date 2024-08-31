@@ -16,4 +16,13 @@ public class Library {
         }
 
     }
+
+    public void borrowBook(String isbn) {
+        if (books.containsKey(isbn)) {
+            books.get(isbn).borrowBook();
+        } else {
+            throw new IllegalArgumentException("Book not found!");
+        }
+    }
+
 }

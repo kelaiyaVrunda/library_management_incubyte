@@ -34,6 +34,14 @@ public class Book {
         return isAvailable;
     }
 
+    public void borrowBook() {
+        if (isAvailable) {
+            isAvailable = false;
+        } else {
+            throw new IllegalStateException("Book is already Borrowed!");
+        }
+    }
+
     public String toString() {
         return "ISBN:" + isbn + ", Title:" + title + ",Auhtor:" + author + ",Year:" + publicationYear + ", Available:"
                 + isAvailable;

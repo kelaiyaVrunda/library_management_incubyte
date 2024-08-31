@@ -8,10 +8,13 @@ public class test {
         Book book = new Book("1234", "Effective java", "Joshua Bloch", 2018);
         library.addBook(book);
     }
+
     @Test
     public void testBorrowBook() {
     Library library = new Library();
-    library.borrowBook("1234");
+    Book book = new Book("1234", "Effective Java", "Joshua Bloch", 2018);
+        library.addBook(book);
+        library.borrowBook("1234");
     }
 
 }
