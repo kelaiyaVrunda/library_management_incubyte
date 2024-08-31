@@ -26,4 +26,12 @@ public class test {
         library.returnBook("1234");
     }
 
+    @Test
+    public void testAvailableBooksAfterAdding() {
+        Library library = new Library();
+        
+        library.addBook(book1);
+        library.addBook(book2);
+    }
+
 }
