@@ -38,6 +38,9 @@ The Project is based on Library Management System build using Java, following th
 
 This project follows the TDD approach, which emphasizes writing tests before writing the actual code. By following this methodology, the system is designed with testing in mind, ensuring robustness and reducing the likelihood of bugs. Each feature of the Library Management System is backed by unit tests written using JUnit, verifying that the feature works as expected.
 
+## Usage
+To use the library management system, run the main class in your java IDE or command line. You can interact with the system through the console to add, borrow, return, and view available books.
+
 ## Installation
 
 To install and run this project, follow this steps:
@@ -46,11 +49,5 @@ To install and run this project, follow this steps:
 ``` bash
 git_clone  https://github.com/kelaiyaVrunda/library_management_incubyte.git
 
-2. Navigate to the project directory:
-``` bash
-cd library-management-system
 
-3. Compile the project using your preffered IDE or command line tools.
 
-## Usage
-To use the library management system, run the main class in your java IDE or command line. You can interact with the system through the console to add, borrow, return, and view available books.
