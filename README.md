@@ -11,8 +11,9 @@ The Project is based on Library Management System build using Java, following th
     - [Available_Books]
 2. [Technologies_Used]
 3. [Test-Driven_Development_(TDD)_Approach]
-4. [Installation]
-5. [Usage]
+4. [Usage]
+5. [Installation]
+
 
 ## Features
 
